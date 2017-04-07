@@ -13,9 +13,13 @@
 </table>
 
 <script>
+var grades = {};
+grades["12"] = {};
+grades["12"]["hw1"] = 36;
+
 function displayGrade() {
 	var perm = document.getElementById("perm");
-	alert(perm.value);
+	alert(grades["12"]["hw1"]);
 }
 </script>
 
