@@ -9,7 +9,7 @@
 <p>Please enter your perm# here: <input type="text" id="perm"></p>
 <button onclick="displayGrade()">Show my grade</button>
 
-<table id="grade-table">
+<table id="gradeTable">
 <tr><td>hi</td></tr>
 </table>
 
@@ -20,8 +20,8 @@ grades["12"]["hw1"] = 36;
 
 function displayGrade() {
 	var perm = document.getElementById("perm");
-	var gradeTable = document.getElementById("grade-table");
-	gradeTable.html("<tr><td>Hi</td></tr>");
+	var gradeTable = document.getElementById("gradeTable");
+	gradeTable.innerHTML = "<tr><td>Hi</td></tr>";
 }
 </script>
 
