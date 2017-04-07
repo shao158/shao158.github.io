@@ -10,7 +10,7 @@
 <button onclick="displayGrade()">Show my grade</button>
 
 <table id="gradeTable">
-<tr><td>hihi</td></tr>
+<tr><td>hihihi</td></tr>
 </table>
 
 <script>
@@ -21,7 +21,7 @@ grades["12"]["hw1"] = 36;
 function displayGrade() {
 	var perm = document.getElementById("perm");
 	var gradeTable = document.getElementById("gradeTable");
-	gradeTable.innerHTML = "<tr><td>Hi</td></tr>";
+	gradeTable.innerHTML = "<tr><td>" + grades[perm.value]["hw1"] + "</td></tr>";
 }
 </script>
 
