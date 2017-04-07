@@ -20,6 +20,8 @@ grades["12"]["hw1"] = 36;
 function displayGrade() {
 	var perm = document.getElementById("perm");
 	alert(grades[perm.value]["hw1"]);
+	var gradeTable = document.getElementById("grade-table");
+	gradeTable.html("<tr><td>" + perm.value + "</td></yr>");
 }
 </script>
 
