@@ -21,12 +21,18 @@ grades["12"]["hw1"] = 36;
 function displayGrade() {
 	var perm = document.getElementById("perm");
 	var gradeTable = document.getElementById("gradeTable");
-	var rows = "<tr><td>Your perm number is: " + perm.value + "</td><td></td></tr>";
-	for (var key in grades[perm.value]) {
-		rows += "<tr><td>" + key + "</td><td>" + grades[perm.value][key] + "</td></tr>";
+	
+	if (perm.value in grades) {
+		var rows = "<tr><td>Your perm number is: " + perm.value + "</td><td></td></tr>";
+		for (var key in grades[perm.value]) {
+			rows += "<tr><td>" + key + "</td><td>" + grades[perm.value][key] + "</td></tr>";
+		}
+		
+		gradeTable.innerHTML = rows;
 	}
-
-	gradeTable.innerHTML = rows;
+	else {
+		alert("No Record. Check your perm number");
+	}
 }
 </script>
 
